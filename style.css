@@ -1,0 +1,105 @@
+/* reset de margens e configurações globais*/
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fdf7f7;
+    color: #231f1f;
+    line-height: 1,5;
+    padding: 20px;
+}
+
+/* Ocultando linhas <hr> */
+hr {
+    display:none;
+}
+/* Cabeçalho*/
+header {
+    background-color: #6278a8;
+    color: #ddcbcb;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+header h1{
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+/* Rodapé */
+footer{
+text-align: center;
+padding: 20px;
+color: #93d7f4;
+font-size: 0.875rem;
+margin-top: 30px;
+}
+
+/* Estrutura de Distribuição da tela */
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+header, footer{ 
+    width: 100%;
+}
+
+   /* Menu Lateral (aside) */
+   {
+     flex: 1;
+     min-width: 200px
+     background-color: #ffffff ;
+     padding: 20px;
+     border-rading: 8px;
+     border: 1px solid #e2e8f0 ;
+     height: fit-content;
+}
+aside h3{
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #110a0a;
+}
+aside ul{
+    list-style: none;
+}
+aside li{
+    margin-bottom: 10px;
+}
+
+aside a {
+    text-decoration: underline;
+        color: #5f2cc5;
+        font-size: 0.95rem;
+}
+aside a: :hover{
+    text-decoration: underline;
+}
+
+main{
+    flex:3;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+section{
+    background-color: #eff2f8;
+    padding:25px;
+    border: 8px;
+    border: 1px solid #fbfbfd;
+}
+
+section h2{
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    color: #110a0a;
+    border-bottom: 2px solid #f4f6f7;
+    padding-bottom: 10px;
+}

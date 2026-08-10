@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Painel de Gestão de Estoque</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Centro de Distribuição - Controle de Estoque</h1>
+        <hr>
+    </header>
+
+    <aside>
+        <h3>Menu do Sistema</h3>
+        <ul>
+            <li><a href="#">Visão Geral</a></li>
+            <li><a href="#">Entrada de Materiais</a></li>
+            <li><a href="#">Inventário</a></li>
+            <li><a href="#">Relatórios</a></li>
+        </ul>
+        <hr>
+    </aside>
+
+    <main>
+        <section>
+            <h2>Cadastrar Novo Item no Estoque</h2>
+            <form>
+                <label for="sku">Código SKU:</label><br>
+                <input type="text" id="sku" placeholder="Ex: ELE-001" required><br><br>
+
+                <label for="produto">Nome do Produto:</label><br>
+                <input type="text" id="produto" placeholder="Nome do item" required><br><br>
+                
+                <label for="categoria">Categoria:</label><br>
+                <select id="categoria" required>
+                    <option value="">Selecione uma categoria.....</option>
+                    <option value="Eletronicos">Eletrônicos</option>
+                    <option value="ferramentas">Ferramentas</option>
+                    <option value="Embalagens">Embalagens</option>
+                    <option value="escritorio">Escritório</option>
+                </select><br><br>
+                
+                <label for="Quantidade">Quantidade:</label><br>
+                <input type="number" id="Quantidade" min="1" required><br><br>
+
+                <label for="Preço">Preço unitário (R$):</label><br>
+                <input type="number" id="Preço" step="0.01" min="0" placeholder="0.00" required><br><br>
+                 
+                <label for="data_recebimento">Data de Recebimento:</label><br>
+                <input type="date" id="data_recebimento" required><br><br>
+     
+                <button type="submit">Cadastrar Item</button>
+                <button type="reset">Limpar Campos</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Inventário Atual</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>SKU</th>
+                        <th>Item</th>
+                        <th>Categoria</th>
+                        <th>Qtd em Estoque</th>
+                        <th>Preço Unitário</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ELE-102</td>
+                        <td>Teclado USB</td>
+                        <td>Eletrônicos</td>
+                        <td>45</td>
+                        <td>R$ 120,00</td>
+                        <td>Disponível</td>
+                    </tr>
+                    <tr>
+                        <td>ELE-067</td>
+                        <td>PS5</td>
+                        <td>Eletrônicos</td>
+                        <td>15</td>
+                        <td>R$ 5.000,00</td>
+                        <td>Baixo Estoque</td>
+                    </tr>
+                    <tr>
+                        <td>ELE-027</td>
+                        <td>Fone JBL</td>
+                        <td>Eletrônicos</td>
+                        <td>45</td>
+                        <td>R$ 360,00</td>
+                        <td>Disponível</td>
+                    </tr>
+                    <tr>
+                        <td>ELE-069</td>
+                        <td>Camisa Coritiba 26/27</td>
+                        <td>Uniforme Esportivo</td>
+                        <td>100</td>
+                        <td>R$ 700,00</td>
+                        <td>Disponível</td>
+                    </tr>
+                    <tr>
+                        <td>ELE-085</td>
+                        <td>PS4</td>
+                        <td>Eletrônicos</td>
+                        <td>50</td>
+                        <td>R$ 3.000,00</td>
+                        <td>Disponível</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3"><strong>Total em Estoque:</strong></td>
+                        <td colspan="3"><strong>437 Itens</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p>&copy; 2026 evelyn </p>
+    </footer>
+
+</body>
+</html>
